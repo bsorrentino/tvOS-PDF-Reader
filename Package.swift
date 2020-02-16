@@ -3,5 +3,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "PDFReader"
-)
+    name: "PDFReader",
+    
+    targets: [
+        .target(
+            name: "PDFReader",
+            path: ".",
+            sources: ["Sources/Classes"])
+    ])
