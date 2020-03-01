@@ -4,9 +4,6 @@ import PackageDescription
 
 let package = Package(
     name: "PDFReader",
-    platforms: [
-      tvOS("13.2")
-    ],
     targets: [
         .target(
             name: "PDFReader",
