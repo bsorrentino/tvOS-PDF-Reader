@@ -2,11 +2,11 @@
 //  PDFReader.h
 //  PDFReader
 //
-//  Created by Ricardo Nunez on 7/28/16.
-//  Copyright © 2016 mytrus. All rights reserved.
+//  Created by softphone on 01/03/2020.
+//  Copyright © 2020 mytrus. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for PDFReader.
 FOUNDATION_EXPORT double PDFReaderVersionNumber;

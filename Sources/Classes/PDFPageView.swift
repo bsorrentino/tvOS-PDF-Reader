@@ -87,7 +87,7 @@ internal final class PDFPageView: UIScrollView {
         }
         
         contentView.addSubview(backgroundImageView)
-        contentView.sendSubviewToBack(backgroundImageView)
+        //contentView.sendSubviewToBack(backgroundImageView)
         contentView.addSubview(tiledPDFView)
         addSubview(contentView)
         
