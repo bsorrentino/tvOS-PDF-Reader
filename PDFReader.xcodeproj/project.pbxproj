@@ -15,6 +15,11 @@
 		146D371F1DAB7EDF004EEFA5 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D371E1DAB7EDF004EEFA5 /* StartViewController.swift */; };
 		146D37231DAB7F0F004EEFA5 /* apple.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 146D37211DAB7F0F004EEFA5 /* apple.pdf */; };
 		146D37241DAB7F0F004EEFA5 /* mongodb.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 146D37221DAB7F0F004EEFA5 /* mongodb.pdf */; };
+		5FCEB918240C536200F9885A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEB917240C536200F9885A /* AppDelegate.swift */; };
+		5FCEB91A240C536200F9885A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEB919240C536200F9885A /* ContentView.swift */; };
+		5FCEB91C240C536300F9885A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEB91B240C536300F9885A /* Assets.xcassets */; };
+		5FCEB91F240C536300F9885A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEB91E240C536300F9885A /* Preview Assets.xcassets */; };
+		5FCEB922240C536300F9885A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEB920240C536300F9885A /* LaunchScreen.storyboard */; };
 		5FEC6DC7240C4AB00086E9D7 /* PDFReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FEC6DC5240C4AB00086E9D7 /* PDFReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5FEC6DCC240C4AF70086E9D7 /* Sources in Resources */ = {isa = PBXBuildFile; fileRef = 5FEC6DCB240C4AF70086E9D7 /* Sources */; };
 /* End PBXBuildFile section */
@@ -43,6 +48,13 @@
 		146D371E1DAB7EDF004EEFA5 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		146D37211DAB7F0F004EEFA5 /* apple.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = apple.pdf; sourceTree = "<group>"; };
 		146D37221DAB7F0F004EEFA5 /* mongodb.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = mongodb.pdf; sourceTree = "<group>"; };
+		5FCEB915240C536200F9885A /* Samples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Samples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FCEB917240C536200F9885A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5FCEB919240C536200F9885A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5FCEB91B240C536300F9885A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5FCEB91E240C536300F9885A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5FCEB921240C536300F9885A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5FCEB923240C536300F9885A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FEC6DC3240C4AB00086E9D7 /* PDFReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PDFReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FEC6DC5240C4AB00086E9D7 /* PDFReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFReader.h; sourceTree = "<group>"; };
 		5FEC6DC6240C4AB00086E9D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +63,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		146D37091DAB7E23004EEFA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FCEB912240C536200F9885A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -70,6 +89,7 @@
 		14083FCF1D4A953900909913 = {
 			isa = PBXGroup;
 			children = (
+				5FCEB916240C536200F9885A /* Samples */,
 				146D370D1DAB7E23004EEFA5 /* Demo */,
 				5FEC6DC4240C4AB00086E9D7 /* PDFReader */,
 				14083FDA1D4A953900909913 /* Products */,
@@ -81,6 +101,7 @@
 			children = (
 				146D370C1DAB7E23004EEFA5 /* Demo.app */,
 				5FEC6DC3240C4AB00086E9D7 /* PDFReader.framework */,
+				5FCEB915240C536200F9885A /* Samples.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,6 +129,27 @@
 				146D37221DAB7F0F004EEFA5 /* mongodb.pdf */,
 			);
 			path = ExamplePDFs;
+			sourceTree = "<group>";
+		};
+		5FCEB916240C536200F9885A /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				5FCEB917240C536200F9885A /* AppDelegate.swift */,
+				5FCEB919240C536200F9885A /* ContentView.swift */,
+				5FCEB91B240C536300F9885A /* Assets.xcassets */,
+				5FCEB920240C536300F9885A /* LaunchScreen.storyboard */,
+				5FCEB923240C536300F9885A /* Info.plist */,
+				5FCEB91D240C536300F9885A /* Preview Content */,
+			);
+			path = Samples;
+			sourceTree = "<group>";
+		};
+		5FCEB91D240C536300F9885A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5FCEB91E240C536300F9885A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		5FEC6DC4240C4AB00086E9D7 /* PDFReader */ = {
@@ -152,6 +194,23 @@
 			productReference = 146D370C1DAB7E23004EEFA5 /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5FCEB914240C536200F9885A /* Samples */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FCEB926240C536300F9885A /* Build configuration list for PBXNativeTarget "Samples" */;
+			buildPhases = (
+				5FCEB911240C536200F9885A /* Sources */,
+				5FCEB912240C536200F9885A /* Frameworks */,
+				5FCEB913240C536200F9885A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Samples;
+			productName = Samples;
+			productReference = 5FCEB915240C536200F9885A /* Samples.app */;
+			productType = "com.apple.product-type.application";
+		};
 		5FEC6DC2240C4AB00086E9D7 /* PDFReader */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5FEC6DC8240C4AB00086E9D7 /* Build configuration list for PBXNativeTarget "PDFReader" */;
@@ -176,7 +235,7 @@
 		14083FD01D4A953900909913 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = mytrus;
 				TargetAttributes = {
@@ -184,6 +243,9 @@
 						CreatedOnToolsVersion = 8.0;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
+					};
+					5FCEB914240C536200F9885A = {
+						CreatedOnToolsVersion = 11.3.1;
 					};
 					5FEC6DC2240C4AB00086E9D7 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -206,6 +268,7 @@
 			targets = (
 				146D370B1DAB7E23004EEFA5 /* Demo */,
 				5FEC6DC2240C4AB00086E9D7 /* PDFReader */,
+				5FCEB914240C536200F9885A /* Samples */,
 			);
 		};
 /* End PBXProject section */
@@ -221,6 +284,16 @@
 				146B85301E306460005F427E /* javaScript.pdf in Resources */,
 				146D37241DAB7F0F004EEFA5 /* mongodb.pdf in Resources */,
 				146D37231DAB7F0F004EEFA5 /* apple.pdf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FCEB913240C536200F9885A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FCEB922240C536300F9885A /* LaunchScreen.storyboard in Resources */,
+				5FCEB91F240C536300F9885A /* Preview Assets.xcassets in Resources */,
+				5FCEB91C240C536300F9885A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +314,15 @@
 			files = (
 				146D370F1DAB7E23004EEFA5 /* AppDelegate.swift in Sources */,
 				146D371F1DAB7EDF004EEFA5 /* StartViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FCEB911240C536200F9885A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FCEB91A240C536200F9885A /* ContentView.swift in Sources */,
+				5FCEB918240C536200F9885A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +348,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				146D37181DAB7E23004EEFA5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5FCEB920240C536300F9885A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FCEB921240C536300F9885A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -435,6 +525,66 @@
 			};
 			name = Release;
 		};
+		5FCEB924240C536300F9885A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Samples/Preview Content\"";
+				DEVELOPMENT_TEAM = 48J595L9BX;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Samples/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bsc.Samples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+			};
+			name = Debug;
+		};
+		5FCEB925240C536300F9885A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Samples/Preview Content\"";
+				DEVELOPMENT_TEAM = 48J595L9BX;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Samples/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bsc.Samples;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+			};
+			name = Release;
+		};
 		5FEC6DC9240C4AB00086E9D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -523,6 +673,15 @@
 			buildConfigurations = (
 				146D371B1DAB7E23004EEFA5 /* Debug */,
 				146D371C1DAB7E23004EEFA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FCEB926240C536300F9885A /* Build configuration list for PBXNativeTarget "Samples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FCEB924240C536300F9885A /* Debug */,
+				5FCEB925240C536300F9885A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
