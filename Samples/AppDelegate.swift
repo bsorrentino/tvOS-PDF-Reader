@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import PDFReader
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+        let documentURL = Bundle.main.url(forResource: "apple", withExtension: "pdf")
+        let document = PDFDocument(url: documentURL!)
+
+        // Create the SwiftUI view that provides the document: <#PDFDocument#>window contents.
+        let contentView = ContentView(document:document!)
 
         // Use a UIHostingController as window root view controller.
         let window = UIWindow(frame: UIScreen.main.bounds)

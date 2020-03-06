@@ -9,18 +9,20 @@
 import UIKit
 
 /// Delegate that is informed of important interaction events with the current thumbnail collection view
-protocol PDFThumbnailControllerDelegate: class {
+public protocol PDFThumbnailControllerDelegate: class {
     /// User has tapped on thumbnail
     func didSelectIndexPath(_ indexPath: IndexPath)
 }
 
 /// Bottom collection of thumbnails that the user can interact with
-internal final class PDFThumbnailCollectionViewController: UICollectionViewController {
+//internal
+public
+final class PDFThumbnailCollectionViewController: UICollectionViewController {
     /// Current document being displayed
-    var document: PDFDocument!
+    public var document: PDFDocument!
     
     /// Current page index being displayed
-    var currentPageIndex: Int = 0 {
+    public var currentPageIndex: Int = 0 {
         didSet {
             guard let collectionView = collectionView else { return }
             guard let pageImages = pageImages else { return }
@@ -43,8 +45,11 @@ internal final class PDFThumbnailCollectionViewController: UICollectionViewContr
         }
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.register(PDFThumbnailCell.self, forCellWithReuseIdentifier: "Cell")
+        
         DispatchQueue.global(qos: .background).async {
             self.document.allPageImages(callback: { (images) in
                 DispatchQueue.main.async {
@@ -54,11 +59,11 @@ internal final class PDFThumbnailCollectionViewController: UICollectionViewContr
         }
     }
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pageImages?.count ?? 0
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PDFThumbnailCell
         
         cell.imageView?.image = pageImages?[indexPath.row]
@@ -71,7 +76,7 @@ internal final class PDFThumbnailCollectionViewController: UICollectionViewContr
         return PDFThumbnailCell.cellSize
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.didSelectIndexPath(indexPath)
     }
 }
