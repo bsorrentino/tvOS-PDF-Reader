@@ -144,7 +144,7 @@ public final class PDFViewController: UIViewController {
         let numberOfPages = CGFloat(document.pageCount)
         let cellSpacing = CGFloat(2.0)
         let totalSpacing = (numberOfPages - 1.0) * cellSpacing
-        let thumbnailWidth = (numberOfPages * PDFThumbnailCell.cellSize.width) + totalSpacing
+        let thumbnailWidth = (numberOfPages * (thumbnailCollectionController?.cellSize.width ?? 0)) + totalSpacing
         let width = min(thumbnailWidth, view.bounds.width)
         thumbnailCollectionControllerWidth.constant = width
     }

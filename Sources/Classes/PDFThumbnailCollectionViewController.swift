@@ -18,6 +18,10 @@ public protocol PDFThumbnailControllerDelegate: class {
 //internal
 public
 final class PDFThumbnailCollectionViewController: UICollectionViewController {
+    
+     /// Preferred size of each cell
+    public var cellSize = CGSize(width: 100, height: 200)
+
     /// Current document being displayed
     public var document: PDFDocument!
     
@@ -73,7 +77,7 @@ final class PDFThumbnailCollectionViewController: UICollectionViewController {
     }
     
     @objc func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
-        return PDFThumbnailCell.cellSize
+        return cellSize
     }
     
     public override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
