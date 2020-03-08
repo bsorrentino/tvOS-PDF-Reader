@@ -9,8 +9,14 @@
 import CoreGraphics
 import UIKit
 
+
+
 /// PDF Document on the system to be interacted with
 public struct PDFDocument {
+    
+    public typealias ProcessImage = (UIImage?) -> UIImage?
+    public typealias ProcessImages = ( [UIImage] ) -> [UIImage]
+
     /// Number of pages document contains
     public let pageCount: Int
     
@@ -95,30 +101,29 @@ public struct PDFDocument {
     func loadPages() {
         DispatchQueue.global(qos: .background).async {
             for pageNumber in 1...self.pageCount {
-                self.imageFromPDFPage(at: pageNumber, callback: { backgroundImage in
-                    guard let backgroundImage = backgroundImage else { return }
+                if let backgroundImage = self.imageFromPDFPage(at: pageNumber ) {
                     self.images.setObject(backgroundImage, forKey: NSNumber(value: pageNumber))
-                })
+                }
             }
         }
     }
     
     /// Image representations of all the document pages
-    func allPageImages(callback: ([UIImage]) -> Void) {
+    public func allPageImages(callback: ProcessImages = { imgs in imgs }) -> [UIImage] {
         var images = [UIImage]()
-        var pagesCompleted = 0
+//      var pagesCompleted = 0
         for pageNumber in 0..<pageCount {
-            pdfPageImage(at: pageNumber+1, callback: { (image) in
-                if let image = image {
-                    images.append(image)
-                }
-                pagesCompleted += 1
-                if pagesCompleted == pageCount {
-                    callback(images)
-                }
-            })
+           if let image = pdfPageImage(at: pageNumber+1 ) {
+                images.append(image)
+            }
+//            pagesCompleted += 1
+//            if pagesCompleted == pageCount {
+//                break
+//            }
         }
+        return callback(images)
     }
+
     
     /// Image representation of the document page, first looking at the cache, calculates otherwise
     ///
@@ -126,18 +131,17 @@ public struct PDFDocument {
     /// - parameter callback: callback to execute when finished
     ///
     /// - returns: Image representation of the document page
-    func pdfPageImage(at pageNumber: Int, callback: (UIImage?) -> Void) {
+    public func pdfPageImage(at pageNumber: Int, callback: ProcessImage = { img in img } ) -> UIImage? {
         if let image = images.object(forKey: NSNumber(value: pageNumber)) {
-            callback(image)
+            return callback(image)
         } else {
-            imageFromPDFPage(at: pageNumber, callback: { image in
+            return imageFromPDFPage(at: pageNumber, callback: { image in
                 guard let image = image else {
-                    callback(nil)
-                    return
+                    return callback(nil)
                 }
                 
                 images.setObject(image, forKey: NSNumber(value: pageNumber))
-                callback(image)
+                return callback(image)
             })
         }
     }
@@ -148,10 +152,9 @@ public struct PDFDocument {
     /// - parameter callback: callback to execute when finished
     ///
     /// - returns: Image representation of the document page
-    private func imageFromPDFPage(at pageNumber: Int, callback: (UIImage?) -> Void) {
+    private func imageFromPDFPage(at pageNumber: Int, callback: ProcessImage = { img in img } ) -> UIImage? {
         guard let page = coreDocument.page(at: pageNumber) else {
-            callback(nil)
-            return
+            return callback(nil)
         }
         
         let originalPageRect = page.originalPageRect
@@ -164,8 +167,7 @@ public struct PDFDocument {
         // Create a low resolution image representation of the PDF page to display before the TiledPDFView renders its content.
         UIGraphicsBeginImageContextWithOptions(scaledPageSize, true, 1)
         guard let context = UIGraphicsGetCurrentContext() else {
-            callback(nil)
-            return
+            return callback(nil)
         }
         
         // First fill the background with white.
@@ -201,11 +203,19 @@ public struct PDFDocument {
         
         defer { UIGraphicsEndImageContext() }
         guard let backgroundImage = UIGraphicsGetImageFromCurrentImageContext() else {
-            callback(nil)
-            return
+            return callback(nil)
         }
         
-        callback(backgroundImage)
+        return callback(backgroundImage)
+    }
+}
+
+extension PDFDocument {
+    
+    public static func createFormBundle( resource:String ) -> PDFDocument {
+        let documentURL = Bundle.main.url(forResource: resource, withExtension: "pdf")
+        let document = PDFDocument(url: documentURL!)
+        return document!
     }
 }
 
@@ -222,3 +232,4 @@ extension CGPDFPage {
         }
     }
 }
+

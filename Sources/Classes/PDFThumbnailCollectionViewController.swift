@@ -55,11 +55,7 @@ final class PDFThumbnailCollectionViewController: UICollectionViewController {
         collectionView.register(PDFThumbnailCell.self, forCellWithReuseIdentifier: "Cell")
         
         DispatchQueue.global(qos: .background).async {
-            self.document.allPageImages(callback: { (images) in
-                DispatchQueue.main.async {
-                    self.pageImages = images
-                }
-            })
+            self.pageImages = self.document.allPageImages()
         }
     }
 

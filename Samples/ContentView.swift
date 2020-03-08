@@ -8,25 +8,54 @@
 
 import SwiftUI
 import PDFReader
+
+
+class ObservablePDFDocument : ObservableObject {
+
+    var document:PDFDocument
+    
+    var pageNumbers:Array<Int>
+    
+    init( fromBundleResource resource:String ) {
+        self.document = PDFDocument.createFormBundle(resource: "apple")
+        
+        self.pageNumbers = Array( 1...document.pageCount )
+    }
+    
+    
+}
+
 struct ContentView: View {
     
     var document:PDFDocument
     
+    @State var focused: Bool = false
+    
     var body: some View {
-        
-        HStack {
-            PDFThumbnailCollectionView( document:self.document )
-            GeometryReader { geometry in
-                VStack(alignment: .leading) {
-                        PDFSinglePageView( document:self.document,
-                                 pageNumber:1,
-                                 frame:CGRect( origin: CGPoint(x: 0,y: 0), size: geometry.size ) )
-                        Spacer()
+        NavigationView {
+            
+            ScrollView {
+                
+                VStack {
+                        
+                    ForEach( document.allPageImages(), id: \.self ) { pageImage in
+
+                        NavigationLink(destination: EmptyView()) {
+                            VStack {
+                                Text( "image" )
+                                Image( uiImage: pageImage )
+                            }
+                        }
+                        
                     }
+                }
+//                .focusable(true, onFocusChange:{ (changed) in
+//                        self.focused = changed
+//                    })
+                }
+
             }
-        }
     }
-        
 }
 
 //struct ContentView_Previews: PreviewProvider {
