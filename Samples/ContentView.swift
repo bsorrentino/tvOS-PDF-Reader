@@ -38,7 +38,7 @@ struct ContentView: View {
                 
                 VStack {
                         
-                    ForEach( document.allPageImages(), id: \.self ) { pageImage in
+                    ForEach( document.allPageImages, id: \.self ) { pageImage in
 
                         NavigationLink(destination: EmptyView()) {
                             VStack {
