@@ -10,51 +10,60 @@ import SwiftUI
 import PDFReader
 
 
-class ObservablePDFDocument : ObservableObject {
-
+struct PDFThumbnailView : View {
+    
     var document:PDFDocument
     
-    var pageNumbers:Array<Int>
+    @Binding var pageSelected:Int
     
-    init( fromBundleResource resource:String ) {
-        self.document = PDFDocument.createFormBundle(resource: "apple")
+    var body: some View {
+        ScrollView {
+            
+            VStack {
+                    
+                ForEach( document.allPageNumbers, id: \.self ) { pageNumber in
+
+                    VStack {
+                        Image( uiImage: self.document.pdfPageImage(at: pageNumber)! )
+                        Text( "page \(pageNumber)" )
+                    }.background(Color.white)
+                    .focusable(true) { changed in
+                        if( changed ) {
+                            self.pageSelected = pageNumber
+                        }
+                    }
+                    
+                }
+            }
+        }
         
-        self.pageNumbers = Array( 1...document.pageCount )
     }
-    
-    
 }
+
 
 struct ContentView: View {
     
     var document:PDFDocument
     
-    @State var focused: Bool = false
+    @State var pageSelected: Int = 1
     
     var body: some View {
-        NavigationView {
-            
-            ScrollView {
-                
-                VStack {
-                        
-                    ForEach( document.allPageImages, id: \.self ) { pageImage in
+        
+        //GeometryReader { geometry in
+            HStack {
+                PDFThumbnailView( document:self.document, pageSelected:self.$pageSelected)
+                if self.pageSelected > 0  {
+                    Spacer()
+                    
+                    PDFDocumentView(
+                        document:self.document,
+                        pageSelected:self.$pageSelected )
+                        //frame:CGRect( origin:CGPoint(x:0, y:0), size:geometry.size  ) )
 
-                        NavigationLink(destination: EmptyView()) {
-                            VStack {
-                                Text( "image" )
-                                Image( uiImage: pageImage )
-                            }
-                        }
-                        
-                    }
                 }
-//                .focusable(true, onFocusChange:{ (changed) in
-//                        self.focused = changed
-//                    })
-                }
+            }.background(Color.gray)
 
-            }
+        //}
     }
 }
 

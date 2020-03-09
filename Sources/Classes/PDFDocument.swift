@@ -105,6 +105,10 @@ public struct PDFDocument {
         }
     }
     
+    public var allPageNumbers:[Int] {
+        return Array(1...self.pageCount)
+    }
+    
     /// Image representations of all the document pages
     public var allPageImages:[UIImage] {
         var images = [UIImage]()
