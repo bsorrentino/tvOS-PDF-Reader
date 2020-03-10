@@ -14,7 +14,7 @@ class PDFPageViewController : UIViewController {
     var pages = Array<PDFPageView>()
     var document : PDFDocument
     
-    var currentPageIndex:Int = 0 {
+    var currentPageIndex:Int = 0{
         didSet {
             if( oldValue == currentPageIndex ) {
                 return
@@ -54,7 +54,6 @@ class PDFPageViewController : UIViewController {
     
     init( document:PDFDocument ) {
         self.document = document
-
         super.init(nibName:nil, bundle: nil)
     }
     
@@ -73,7 +72,11 @@ struct PDFDocumentView : UIViewControllerRepresentable {
     @Binding var pageSelected:Int
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<PDFDocumentView>) -> UIViewControllerType {
-        PDFPageViewController( document: document )
+        
+        let controller = PDFPageViewController( document: document )
+        controller.currentPageIndex = pageSelected
+        
+        return controller
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: UIViewControllerRepresentableContext<PDFDocumentView>) {
