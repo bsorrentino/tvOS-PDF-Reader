@@ -1,0 +1,27 @@
+PODS:
+  - OHPDFImage (3.2.1)
+  - PDFReader (2.5.1)
+
+DEPENDENCIES:
+  - OHPDFImage (from `https://github.com/bsorrentino/OHPDFImage.git`, branch `develop`)
+  - PDFReader (from `.`)
+
+EXTERNAL SOURCES:
+  OHPDFImage:
+    :branch: develop
+    :git: https://github.com/bsorrentino/OHPDFImage.git
+  PDFReader:
+    :path: "."
+
+CHECKOUT OPTIONS:
+  OHPDFImage:
+    :commit: 327daf155b7bb736941ab798d5b6326ac28567eb
+    :git: https://github.com/bsorrentino/OHPDFImage.git
+
+SPEC CHECKSUMS:
+  OHPDFImage: 35c021cfd0f6df089185e4ea9f183dc3453a6281
+  PDFReader: 0c9e6815b007d1188b801a0be09c3e701fb3ebfb
+
+PODFILE CHECKSUM: 291a0d8a5051792acea979ac3fe05ebeedadf4a7
+
+COCOAPODS: 1.9.0.beta.3
