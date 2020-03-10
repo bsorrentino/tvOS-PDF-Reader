@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5FEC6DC2240C4AB00086E9D7"
-               BuildableName = "PDFReaderDemo.framework"
-               BlueprintName = "PDFReaderDemo"
-               ReferencedContainer = "container:PDFReaderDemo.xcodeproj">
+               BuildableName = "PDFReader.framework"
+               BlueprintName = "PDFReader"
+               ReferencedContainer = "container:PDFReader.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5FEC6DC2240C4AB00086E9D7"
-            BuildableName = "PDFReaderDemo.framework"
-            BlueprintName = "PDFReaderDemo"
-            ReferencedContainer = "container:PDFReaderDemo.xcodeproj">
+            BuildableName = "PDFReader.framework"
+            BlueprintName = "PDFReader"
+            ReferencedContainer = "container:PDFReader.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
@@ -60,9 +60,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5FEC6DC2240C4AB00086E9D7"
-            BuildableName = "PDFReaderDemo.framework"
-            BlueprintName = "PDFReaderDemo"
-            ReferencedContainer = "container:PDFReaderDemo.xcodeproj">
+            BuildableName = "PDFReader.framework"
+            BlueprintName = "PDFReader"
+            ReferencedContainer = "container:PDFReader.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
