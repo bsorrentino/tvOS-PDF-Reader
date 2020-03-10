@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2548C9FEAB36736E80452812 /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E766AEC5F63FDA7D7351CC60 /* libPods-Example.a */; };
+		A000FB7F2417C34B00D06E93 /* PDFReader+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E85B8824125AAD0024C66D /* PDFReader+UIKit.swift */; };
+		A000FB802417C34B00D06E93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEB917240C536200F9885A /* AppDelegate.swift */; };
+		A000FB812417C34B00D06E93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEB919240C536200F9885A /* ContentView.swift */; };
+		A000FB822417C35400D06E93 /* apple.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A0E85BB024129E700024C66D /* apple.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,6 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A000FB822417C35400D06E93 /* apple.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A000FB7F2417C34B00D06E93 /* PDFReader+UIKit.swift in Sources */,
+				A000FB802417C34B00D06E93 /* AppDelegate.swift in Sources */,
+				A000FB812417C34B00D06E93 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

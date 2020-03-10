@@ -1,13 +1,14 @@
 //
 //  AppDelegate.swift
-//  Example
+//  Samples
 //
-//  Created by Bartolomeo Sorrentino on 10/03/2020.
+//  Created by softphone on 01/03/2020.
 //  Copyright © 2020 mytrus. All rights reserved.
 //
 
 import UIKit
 import SwiftUI
+import PDFReader
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+        let document = PDFDocument.createFormBundle(resource: "apple")
+
+        // Create the SwiftUI view that provides the document: <#PDFDocument#>window contents.
+        let contentView = ContentView(document:document)
 
         // Use a UIHostingController as window root view controller.
         let window = UIWindow(frame: UIScreen.main.bounds)
@@ -47,4 +50,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
