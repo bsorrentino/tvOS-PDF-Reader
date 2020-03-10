@@ -12,6 +12,8 @@
 		A000FB802417C34B00D06E93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEB917240C536200F9885A /* AppDelegate.swift */; };
 		A000FB812417C34B00D06E93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEB919240C536200F9885A /* ContentView.swift */; };
 		A000FB822417C35400D06E93 /* apple.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A0E85BB024129E700024C66D /* apple.pdf */; };
+		A000FB842417C41500D06E93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEB91B240C536300F9885A /* Assets.xcassets */; };
+		A000FB852417C41500D06E93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEB91E240C536300F9885A /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -179,6 +181,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A000FB842417C41500D06E93 /* Assets.xcassets in Resources */,
+				A000FB852417C41500D06E93 /* Preview Assets.xcassets in Resources */,
 				A000FB822417C35400D06E93 /* apple.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
