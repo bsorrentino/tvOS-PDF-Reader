@@ -144,7 +144,7 @@ public final class PDFViewController: UIViewController {
         let numberOfPages = CGFloat(document.pageCount)
         let cellSpacing = CGFloat(2.0)
         let totalSpacing = (numberOfPages - 1.0) * cellSpacing
-        let thumbnailWidth = (numberOfPages * PDFThumbnailCell.cellSize.width) + totalSpacing
+        let thumbnailWidth = (numberOfPages * (thumbnailCollectionController?.cellSize.width ?? 0)) + totalSpacing
         let width = min(thumbnailWidth, view.bounds.width)
         thumbnailCollectionControllerWidth.constant = width
     }
@@ -154,6 +154,7 @@ public final class PDFViewController: UIViewController {
         didSelectIndexPath(IndexPath(row: currentPageIndex, section: 0))
     }
     
+    #if !os(tvOS)
     override public var prefersStatusBarHidden: Bool {
         return navigationController?.isNavigationBarHidden == true
     }
@@ -161,6 +162,7 @@ public final class PDFViewController: UIViewController {
     override public var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
         return .slide
     }
+    #endif
     
     public override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return isThumbnailsEnabled
@@ -201,11 +203,14 @@ public final class PDFViewController: UIViewController {
     
     /// Presents activity sheet to share or open PDF in another app
     private func presentActivitySheet() {
+        #if !os(tvOS)
         let controller = UIActivityViewController(activityItems: [document.fileData], applicationActivities: nil)
         controller.popoverPresentationController?.barButtonItem = actionButton
         present(controller, animated: true, completion: nil)
+        #endif
     }
     
+    #if !os(tvOS)
     /// Presents print sheet to print PDF
     private func print() {
         guard UIPrintInteractionController.isPrintingAvailable else { return }
@@ -222,10 +227,11 @@ public final class PDFViewController: UIViewController {
         printInteraction.showsPageRange = true
         printInteraction.present(animated: true, completionHandler: nil)
     }
+    #endif
 }
 
 extension PDFViewController: PDFThumbnailControllerDelegate {
-    func didSelectIndexPath(_ indexPath: IndexPath) {
+    public func didSelectIndexPath(_ indexPath: IndexPath) {
         collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
         thumbnailCollectionController?.currentPageIndex = currentPageIndex
     }

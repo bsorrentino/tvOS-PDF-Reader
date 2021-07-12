@@ -9,7 +9,7 @@
 import UIKit
 
 /// Delegate that is informed of important interaction events with the pdf page collection view
-protocol PDFPageCollectionViewCellDelegate: class {
+protocol PDFPageCollectionViewCellDelegate: AnyObject {
     func handleSingleTap(_ cell: PDFPageCollectionViewCell, pdfPageView: PDFPageView)
 }
 
@@ -40,10 +40,9 @@ internal final class PDFPageCollectionViewCell: UICollectionViewCell {
     /// - parameter pageCollectionViewCellDelegate: delegate informed of important events
     func setup(_ indexPathRow: Int, collectionViewBounds: CGRect, document: PDFDocument, pageCollectionViewCellDelegate: PDFPageCollectionViewCellDelegate?) {
         self.pageCollectionViewCellDelegate = pageCollectionViewCellDelegate
-        document.pdfPageImage(at: indexPathRow + 1) { (backgroundImage) in
-            pageView = PDFPageView(frame: bounds, document: document, pageNumber: indexPathRow, backgroundImage: backgroundImage, pageViewDelegate: self)
-            pageIndex = indexPathRow
-        }
+        let backgroundImage = document.pdfPageImage(at: indexPathRow + 1)
+        pageView = PDFPageView(frame: bounds, document: document, pageNumber: indexPathRow, backgroundImage: backgroundImage, pageViewDelegate: self)
+        pageIndex = indexPathRow
     }
 }
 

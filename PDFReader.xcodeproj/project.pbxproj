@@ -7,95 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		146B85301E306460005F427E /* javaScript.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 146B852E1E30633A005F427E /* javaScript.pdf */; };
-		146D370F1DAB7E23004EEFA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D370E1DAB7E23004EEFA5 /* AppDelegate.swift */; };
-		146D37141DAB7E23004EEFA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146D37121DAB7E23004EEFA5 /* Main.storyboard */; };
-		146D37161DAB7E23004EEFA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 146D37151DAB7E23004EEFA5 /* Assets.xcassets */; };
-		146D37191DAB7E23004EEFA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 146D37171DAB7E23004EEFA5 /* LaunchScreen.storyboard */; };
-		146D371F1DAB7EDF004EEFA5 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D371E1DAB7EDF004EEFA5 /* StartViewController.swift */; };
-		146D37231DAB7F0F004EEFA5 /* apple.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 146D37211DAB7F0F004EEFA5 /* apple.pdf */; };
-		146D37241DAB7F0F004EEFA5 /* mongodb.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 146D37221DAB7F0F004EEFA5 /* mongodb.pdf */; };
-		5F28F563269CDEBA0084151B /* ExamplePDFs in Resources */ = {isa = PBXBuildFile; fileRef = 5F28F562269CDEBA0084151B /* ExamplePDFs */; };
-		5F28F56F269CE2C60084151B /* Sources in Resources */ = {isa = PBXBuildFile; fileRef = 5F28F56E269CE2C60084151B /* Sources */; };
-		5F28F595269CE5C00084151B /* PDFDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28F58E269CE5C00084151B /* PDFDocument.swift */; };
-		5F28F597269CE5C00084151B /* TiledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28F590269CE5C00084151B /* TiledView.swift */; };
-		5F28F598269CE5C00084151B /* PDFThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28F591269CE5C00084151B /* PDFThumbnailCell.swift */; };
-		5F28F599269CE5C00084151B /* PDFThumbnailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28F592269CE5C00084151B /* PDFThumbnailCollectionViewController.swift */; };
-		5F28F59A269CE5C00084151B /* PDFPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28F593269CE5C00084151B /* PDFPageCollectionViewCell.swift */; };
-		5F28F59B269CE5C00084151B /* PDFPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28F594269CE5C00084151B /* PDFPageView.swift */; };
-		5F28F59F269CEA730084151B /* PDFDocumentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F28F59E269CEA730084151B /* PDFDocumentObject.swift */; };
-		5FCEB918240C536200F9885A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEB917240C536200F9885A /* AppDelegate.swift */; };
-		5FCEB91A240C536200F9885A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEB919240C536200F9885A /* ContentView.swift */; };
-		5FCEB91C240C536300F9885A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEB91B240C536300F9885A /* Assets.xcassets */; };
-		5FCEB91F240C536300F9885A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEB91E240C536300F9885A /* Preview Assets.xcassets */; };
-		5FCEB922240C536300F9885A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEB920240C536300F9885A /* LaunchScreen.storyboard */; };
-		5FEC6DC7240C4AB00086E9D7 /* PDFReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FEC6DC5240C4AB00086E9D7 /* PDFReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A000FB7F2417C34B00D06E93 /* PDFReader+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E85B8824125AAD0024C66D /* PDFReader+UIKit.swift */; };
+		A000FB802417C34B00D06E93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEB917240C536200F9885A /* AppDelegate.swift */; };
+		A000FB812417C34B00D06E93 /* PDFReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEB919240C536200F9885A /* PDFReaderView.swift */; };
+		A000FB822417C35400D06E93 /* apple.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A0E85BB024129E700024C66D /* apple.pdf */; };
+		A000FB842417C41500D06E93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEB91B240C536300F9885A /* Assets.xcassets */; };
+		A000FB852417C41500D06E93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCEB91E240C536300F9885A /* Preview Assets.xcassets */; };
+		A000FB872417D6C900D06E93 /* OHPDFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000FB862417D6C900D06E93 /* OHPDFImage.swift */; };
+		A000FB8924180E1C00D06E93 /* OHPDFImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000FB8824180E1C00D06E93 /* OHPDFImageView.swift */; };
+		A000FB8B241815D500D06E93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A000FB8A241815D500D06E93 /* ContentView.swift */; };
+		EB5B4409B75C1A657ABEFC1D /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D3DB82471C3E3498982E23 /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		1456DCCC1E2AA9A8001C3793 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		146B852E1E30633A005F427E /* javaScript.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = javaScript.pdf; sourceTree = "<group>"; };
-		146D370C1DAB7E23004EEFA5 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		146D370E1DAB7E23004EEFA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		146D37131DAB7E23004EEFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		146D37151DAB7E23004EEFA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		146D37181DAB7E23004EEFA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		146D371A1DAB7E23004EEFA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		146D371E1DAB7EDF004EEFA5 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
-		146D37211DAB7F0F004EEFA5 /* apple.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = apple.pdf; sourceTree = "<group>"; };
-		146D37221DAB7F0F004EEFA5 /* mongodb.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = mongodb.pdf; sourceTree = "<group>"; };
-		5F28F562269CDEBA0084151B /* ExamplePDFs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ExamplePDFs; sourceTree = SOURCE_ROOT; };
-		5F28F56E269CE2C60084151B /* Sources */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Sources; sourceTree = SOURCE_ROOT; };
-		5F28F58E269CE5C00084151B /* PDFDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFDocument.swift; path = Sources/Classes/PDFDocument.swift; sourceTree = SOURCE_ROOT; };
-		5F28F590269CE5C00084151B /* TiledView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TiledView.swift; path = Sources/Classes/TiledView.swift; sourceTree = SOURCE_ROOT; };
-		5F28F591269CE5C00084151B /* PDFThumbnailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFThumbnailCell.swift; path = Sources/Classes/PDFThumbnailCell.swift; sourceTree = SOURCE_ROOT; };
-		5F28F592269CE5C00084151B /* PDFThumbnailCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFThumbnailCollectionViewController.swift; path = Sources/Classes/PDFThumbnailCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
-		5F28F593269CE5C00084151B /* PDFPageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFPageCollectionViewCell.swift; path = Sources/Classes/PDFPageCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
-		5F28F594269CE5C00084151B /* PDFPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFPageView.swift; path = Sources/Classes/PDFPageView.swift; sourceTree = SOURCE_ROOT; };
-		5F28F59E269CEA730084151B /* PDFDocumentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentObject.swift; sourceTree = "<group>"; };
-		5FCEB915240C536200F9885A /* Samples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Samples.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1471E208140806F068F5BB82 /* Pods-PDFReaderDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDFReaderDemo.release.xcconfig"; path = "Target Support Files/Pods-PDFReaderDemo/Pods-PDFReaderDemo.release.xcconfig"; sourceTree = "<group>"; };
+		4101A69CC9798DC8EDFF24BB /* libPods-PDFReaderDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PDFReaderDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57559918DE6EA7125CD44D36 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5FCEB917240C536200F9885A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5FCEB919240C536200F9885A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5FCEB919240C536200F9885A /* PDFReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFReaderView.swift; sourceTree = "<group>"; };
 		5FCEB91B240C536300F9885A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FCEB91E240C536300F9885A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5FCEB921240C536300F9885A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FCEB923240C536300F9885A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FEC6DC3240C4AB00086E9D7 /* PDFReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PDFReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FEC6DC5240C4AB00086E9D7 /* PDFReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDFReader.h; sourceTree = "<group>"; };
-		5FEC6DC6240C4AB00086E9D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69665156C9B316AA6BF7EAF8 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		92FACBF52439AD38C8EDCC31 /* Pods-PDFReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDFReader.debug.xcconfig"; path = "Target Support Files/Pods-PDFReader/Pods-PDFReader.debug.xcconfig"; sourceTree = "<group>"; };
+		A000FB512417BD4600D06E93 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.2.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		A000FB6D2417BFE000D06E93 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A000FB862417D6C900D06E93 /* OHPDFImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHPDFImage.swift; sourceTree = "<group>"; };
+		A000FB8824180E1C00D06E93 /* OHPDFImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OHPDFImageView.swift; sourceTree = "<group>"; };
+		A000FB8A241815D500D06E93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A0E85B8824125AAD0024C66D /* PDFReader+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PDFReader+UIKit.swift"; sourceTree = "<group>"; };
+		A0E85BB024129E700024C66D /* apple.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = apple.pdf; sourceTree = "<group>"; };
+		AA040A69A9CB94150F2BBDF9 /* Pods-PDFReaderDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDFReaderDemo.debug.xcconfig"; path = "Target Support Files/Pods-PDFReaderDemo/Pods-PDFReaderDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C3D3DB82471C3E3498982E23 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA99C3B75F43FCE14CCA4D5C /* Pods-PDFReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDFReader.release.xcconfig"; path = "Target Support Files/Pods-PDFReader/Pods-PDFReader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		146D37091DAB7E23004EEFA5 /* Frameworks */ = {
+		A000FB6A2417BFE000D06E93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5FCEB912240C536200F9885A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5FEC6DC0240C4AB00086E9D7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				EB5B4409B75C1A657ABEFC1D /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,75 +58,44 @@
 		14083FCF1D4A953900909913 = {
 			isa = PBXGroup;
 			children = (
-				5FCEB916240C536200F9885A /* Samples */,
-				146D370D1DAB7E23004EEFA5 /* Demo */,
-				5FEC6DC4240C4AB00086E9D7 /* PDFReader */,
+				5FCEB916240C536200F9885A /* Example */,
 				14083FDA1D4A953900909913 /* Products */,
-				5F28F55D269CDD100084151B /* Frameworks */,
+				A0E85B8A24125BAA0024C66D /* Frameworks */,
+				46572382B3C0906C86303628 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		14083FDA1D4A953900909913 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				146D370C1DAB7E23004EEFA5 /* Demo.app */,
-				5FEC6DC3240C4AB00086E9D7 /* PDFReader.framework */,
-				5FCEB915240C536200F9885A /* Samples.app */,
+				A000FB6D2417BFE000D06E93 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		146D370D1DAB7E23004EEFA5 /* Demo */ = {
+		46572382B3C0906C86303628 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				146D37201DAB7F0F004EEFA5 /* ExamplePDFs */,
-				146D371E1DAB7EDF004EEFA5 /* StartViewController.swift */,
-				146D370E1DAB7E23004EEFA5 /* AppDelegate.swift */,
-				146D37121DAB7E23004EEFA5 /* Main.storyboard */,
-				146D37151DAB7E23004EEFA5 /* Assets.xcassets */,
-				146D37171DAB7E23004EEFA5 /* LaunchScreen.storyboard */,
-				146D371A1DAB7E23004EEFA5 /* Info.plist */,
+				92FACBF52439AD38C8EDCC31 /* Pods-PDFReader.debug.xcconfig */,
+				FA99C3B75F43FCE14CCA4D5C /* Pods-PDFReader.release.xcconfig */,
+				AA040A69A9CB94150F2BBDF9 /* Pods-PDFReaderDemo.debug.xcconfig */,
+				1471E208140806F068F5BB82 /* Pods-PDFReaderDemo.release.xcconfig */,
+				57559918DE6EA7125CD44D36 /* Pods-Example.debug.xcconfig */,
+				69665156C9B316AA6BF7EAF8 /* Pods-Example.release.xcconfig */,
 			);
-			name = Demo;
-			path = PDFReader/Demo;
+			path = Pods;
 			sourceTree = "<group>";
 		};
-		146D37201DAB7F0F004EEFA5 /* ExamplePDFs */ = {
+		5FCEB916240C536200F9885A /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				146B852E1E30633A005F427E /* javaScript.pdf */,
-				146D37211DAB7F0F004EEFA5 /* apple.pdf */,
-				146D37221DAB7F0F004EEFA5 /* mongodb.pdf */,
-			);
-			path = ExamplePDFs;
-			sourceTree = "<group>";
-		};
-		5F28F55D269CDD100084151B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5F28F58C269CE5280084151B /* PDFReader */ = {
-			isa = PBXGroup;
-			children = (
-				5F28F58E269CE5C00084151B /* PDFDocument.swift */,
-				5F28F593269CE5C00084151B /* PDFPageCollectionViewCell.swift */,
-				5F28F594269CE5C00084151B /* PDFPageView.swift */,
-				5F28F591269CE5C00084151B /* PDFThumbnailCell.swift */,
-				5F28F592269CE5C00084151B /* PDFThumbnailCollectionViewController.swift */,
-				5F28F590269CE5C00084151B /* TiledView.swift */,
-			);
-			path = PDFReader;
-			sourceTree = "<group>";
-		};
-		5FCEB916240C536200F9885A /* Samples */ = {
-			isa = PBXGroup;
-			children = (
-				5F28F58C269CE5280084151B /* PDFReader */,
+				A0E85BAF24129B0F0024C66D /* PDFs */,
+				A000FB862417D6C900D06E93 /* OHPDFImage.swift */,
+				A0E85B8824125AAD0024C66D /* PDFReader+UIKit.swift */,
 				5FCEB917240C536200F9885A /* AppDelegate.swift */,
-				5FCEB919240C536200F9885A /* ContentView.swift */,
+				5FCEB919240C536200F9885A /* PDFReaderView.swift */,
+				A000FB8824180E1C00D06E93 /* OHPDFImageView.swift */,
+				A000FB8A241815D500D06E93 /* ContentView.swift */,
 				5FCEB91B240C536300F9885A /* Assets.xcassets */,
 				5F28F562269CDEBA0084151B /* ExamplePDFs */,
 				5FCEB920240C536300F9885A /* LaunchScreen.storyboard */,
@@ -181,7 +103,7 @@
 				5FCEB91D240C536300F9885A /* Preview Content */,
 				5F28F59E269CEA730084151B /* PDFDocumentObject.swift */,
 			);
-			path = Samples;
+			path = Example;
 			sourceTree = "<group>";
 		};
 		5FCEB91D240C536300F9885A /* Preview Content */ = {
@@ -192,82 +114,45 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		5FEC6DC4240C4AB00086E9D7 /* PDFReader */ = {
+		A0E85B8A24125BAA0024C66D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5F28F56E269CE2C60084151B /* Sources */,
-				5FEC6DC5240C4AB00086E9D7 /* PDFReader.h */,
-				5FEC6DC6240C4AB00086E9D7 /* Info.plist */,
+				A000FB512417BD4600D06E93 /* CoreFoundation.framework */,
+				4101A69CC9798DC8EDFF24BB /* libPods-PDFReaderDemo.a */,
+				C3D3DB82471C3E3498982E23 /* Pods_Example.framework */,
 			);
-			path = PDFReader;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0E85BAF24129B0F0024C66D /* PDFs */ = {
+			isa = PBXGroup;
+			children = (
+				A0E85BB024129E700024C66D /* apple.pdf */,
+			);
+			path = PDFs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		5FEC6DBE240C4AB00086E9D7 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5FEC6DC7240C4AB00086E9D7 /* PDFReader.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		146D370B1DAB7E23004EEFA5 /* Demo */ = {
+		A000FB6C2417BFE000D06E93 /* Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 146D371D1DAB7E23004EEFA5 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildConfigurationList = A000FB7C2417BFE000D06E93 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
-				146D37081DAB7E23004EEFA5 /* Sources */,
-				146D37091DAB7E23004EEFA5 /* Frameworks */,
-				146D370A1DAB7E23004EEFA5 /* Resources */,
-				1456DCCC1E2AA9A8001C3793 /* Embed Frameworks */,
+				1A80061003B5D293FAE911CE /* [CP] Check Pods Manifest.lock */,
+				A000FB692417BFE000D06E93 /* Sources */,
+				A000FB6A2417BFE000D06E93 /* Frameworks */,
+				A000FB6B2417BFE000D06E93 /* Resources */,
+				5867168C0ED91A6EDEA97087 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Demo;
-			productName = Demo;
-			productReference = 146D370C1DAB7E23004EEFA5 /* Demo.app */;
+			name = Example;
+			productName = Example;
+			productReference = A000FB6D2417BFE000D06E93 /* Example.app */;
 			productType = "com.apple.product-type.application";
-		};
-		5FCEB914240C536200F9885A /* Samples */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5FCEB926240C536300F9885A /* Build configuration list for PBXNativeTarget "Samples" */;
-			buildPhases = (
-				5FCEB911240C536200F9885A /* Sources */,
-				5FCEB912240C536200F9885A /* Frameworks */,
-				5FCEB913240C536200F9885A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Samples;
-			productName = Samples;
-			productReference = 5FCEB915240C536200F9885A /* Samples.app */;
-			productType = "com.apple.product-type.application";
-		};
-		5FEC6DC2240C4AB00086E9D7 /* PDFReader */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5FEC6DC8240C4AB00086E9D7 /* Build configuration list for PBXNativeTarget "PDFReader" */;
-			buildPhases = (
-				5FEC6DBE240C4AB00086E9D7 /* Headers */,
-				5FEC6DBF240C4AB00086E9D7 /* Sources */,
-				5FEC6DC0240C4AB00086E9D7 /* Frameworks */,
-				5FEC6DC1240C4AB00086E9D7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PDFReader;
-			productName = PDFReader;
-			productReference = 5FEC6DC3240C4AB00086E9D7 /* PDFReader.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -279,17 +164,8 @@
 				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = mytrus;
 				TargetAttributes = {
-					146D370B1DAB7E23004EEFA5 = {
-						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 1000;
-						ProvisioningStyle = Automatic;
-					};
-					5FCEB914240C536200F9885A = {
+					A000FB6C2417BFE000D06E93 = {
 						CreatedOnToolsVersion = 11.3.1;
-					};
-					5FEC6DC2240C4AB00086E9D7 = {
-						CreatedOnToolsVersion = 11.3.1;
-						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -306,100 +182,83 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				146D370B1DAB7E23004EEFA5 /* Demo */,
-				5FEC6DC2240C4AB00086E9D7 /* PDFReader */,
-				5FCEB914240C536200F9885A /* Samples */,
+				A000FB6C2417BFE000D06E93 /* Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		146D370A1DAB7E23004EEFA5 /* Resources */ = {
+		A000FB6B2417BFE000D06E93 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				146D37191DAB7E23004EEFA5 /* LaunchScreen.storyboard in Resources */,
-				146D37161DAB7E23004EEFA5 /* Assets.xcassets in Resources */,
-				146D37141DAB7E23004EEFA5 /* Main.storyboard in Resources */,
-				146B85301E306460005F427E /* javaScript.pdf in Resources */,
-				146D37241DAB7F0F004EEFA5 /* mongodb.pdf in Resources */,
-				146D37231DAB7F0F004EEFA5 /* apple.pdf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5FCEB913240C536200F9885A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F28F563269CDEBA0084151B /* ExamplePDFs in Resources */,
-				5FCEB922240C536300F9885A /* LaunchScreen.storyboard in Resources */,
-				5FCEB91F240C536300F9885A /* Preview Assets.xcassets in Resources */,
-				5FCEB91C240C536300F9885A /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5FEC6DC1240C4AB00086E9D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F28F56F269CE2C60084151B /* Sources in Resources */,
+				A000FB842417C41500D06E93 /* Assets.xcassets in Resources */,
+				A000FB852417C41500D06E93 /* Preview Assets.xcassets in Resources */,
+				A000FB822417C35400D06E93 /* apple.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A80061003B5D293FAE911CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5867168C0ED91A6EDEA97087 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		146D37081DAB7E23004EEFA5 /* Sources */ = {
+		A000FB692417BFE000D06E93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				146D370F1DAB7E23004EEFA5 /* AppDelegate.swift in Sources */,
-				146D371F1DAB7EDF004EEFA5 /* StartViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5FCEB911240C536200F9885A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F28F59A269CE5C00084151B /* PDFPageCollectionViewCell.swift in Sources */,
-				5F28F59F269CEA730084151B /* PDFDocumentObject.swift in Sources */,
-				5FCEB91A240C536200F9885A /* ContentView.swift in Sources */,
-				5F28F598269CE5C00084151B /* PDFThumbnailCell.swift in Sources */,
-				5F28F599269CE5C00084151B /* PDFThumbnailCollectionViewController.swift in Sources */,
-				5F28F597269CE5C00084151B /* TiledView.swift in Sources */,
-				5F28F595269CE5C00084151B /* PDFDocument.swift in Sources */,
-				5F28F59B269CE5C00084151B /* PDFPageView.swift in Sources */,
-				5FCEB918240C536200F9885A /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5FEC6DBF240C4AB00086E9D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				A000FB7F2417C34B00D06E93 /* PDFReader+UIKit.swift in Sources */,
+				A000FB802417C34B00D06E93 /* AppDelegate.swift in Sources */,
+				A000FB8B241815D500D06E93 /* ContentView.swift in Sources */,
+				A000FB872417D6C900D06E93 /* OHPDFImage.swift in Sources */,
+				A000FB812417C34B00D06E93 /* PDFReaderView.swift in Sources */,
+				A000FB8924180E1C00D06E93 /* OHPDFImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		146D37121DAB7E23004EEFA5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				146D37131DAB7E23004EEFA5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		146D37171DAB7E23004EEFA5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				146D37181DAB7E23004EEFA5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		5FCEB920240C536300F9885A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -530,53 +389,9 @@
 			};
 			name = Release;
 		};
-		146D371B1DAB7E23004EEFA5 /* Debug */ = {
+		A000FB7D2417BFE000D06E93 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HC9R4J3HM5;
-				INFOPLIST_FILE = "$(SRCROOT)/PDFReader/Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mytrus.Demo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		146D371C1DAB7E23004EEFA5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HC9R4J3HM5;
-				INFOPLIST_FILE = "$(SRCROOT)/PDFReader/Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mytrus.Demo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		5FCEB924240C536300F9885A /* Debug */ = {
-			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57559918DE6EA7125CD44D36 /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -585,18 +400,18 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Samples/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
 				DEVELOPMENT_TEAM = 48J595L9BX;
 				ENABLE_PREVIEWS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = Samples/Info.plist;
+				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.bsc.Samples;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bsc.slides.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -606,8 +421,9 @@
 			};
 			name = Debug;
 		};
-		5FCEB925240C536300F9885A /* Release */ = {
+		A000FB7E2417BFE000D06E93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69665156C9B316AA6BF7EAF8 /* Pods-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -616,90 +432,19 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Samples/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
 				DEVELOPMENT_TEAM = 48J595L9BX;
 				ENABLE_PREVIEWS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = Samples/Info.plist;
+				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.bsc.Samples;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bsc.slides.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.2;
-			};
-			name = Release;
-		};
-		5FEC6DC9240C4AB00086E9D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 48J595L9BX;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = PDFReader/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.bsc.PDFReader;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.2;
-			};
-			name = Debug;
-		};
-		5FEC6DCA240C4AB00086E9D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 48J595L9BX;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = PDFReader/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.bsc.PDFReader;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 13.2;
@@ -718,29 +463,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		146D371D1DAB7E23004EEFA5 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+		A000FB7C2417BFE000D06E93 /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				146D371B1DAB7E23004EEFA5 /* Debug */,
-				146D371C1DAB7E23004EEFA5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5FCEB926240C536300F9885A /* Build configuration list for PBXNativeTarget "Samples" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5FCEB924240C536300F9885A /* Debug */,
-				5FCEB925240C536300F9885A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5FEC6DC8240C4AB00086E9D7 /* Build configuration list for PBXNativeTarget "PDFReader" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5FEC6DC9240C4AB00086E9D7 /* Debug */,
-				5FEC6DCA240C4AB00086E9D7 /* Release */,
+				A000FB7D2417BFE000D06E93 /* Debug */,
+				A000FB7E2417BFE000D06E93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
