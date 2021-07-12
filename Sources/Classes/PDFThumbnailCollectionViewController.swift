@@ -9,7 +9,7 @@
 import UIKit
 
 /// Delegate that is informed of important interaction events with the current thumbnail collection view
-protocol PDFThumbnailControllerDelegate: class {
+protocol PDFThumbnailControllerDelegate : AnyObject {
     /// User has tapped on thumbnail
     func didSelectIndexPath(_ indexPath: IndexPath)
 }

@@ -9,8 +9,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var doc:PDFDocumentObject
+    
     var body: some View {
-        Text("Hello, World!")
+        Image( uiImage: doc.pages[0] )
     }
 }
 

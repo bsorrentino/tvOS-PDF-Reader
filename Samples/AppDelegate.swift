@@ -9,6 +9,7 @@
 import UIKit
 import SwiftUI
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,8 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        
+        guard let documentURL = Bundle.main.url(forResource: "apple", withExtension: "pdf", subdirectory: "ExamplePDFs") else { return false }
+        let doc = PDFDocumentObject(url: documentURL)
+        
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+        let contentView = ContentView().environmentObject(doc)
 
         // Use a UIHostingController as window root view controller.
         let window = UIWindow(frame: UIScreen.main.bounds)
