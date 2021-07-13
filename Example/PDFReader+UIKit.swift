@@ -8,47 +8,22 @@
 
 import SwiftUI
 import PDFReader
+import Combine
+
 
 class PDFPageViewController : UIViewController {
+    
+    typealias Value = (newValue:Int,oldValue:Int)
     
     var pages = Array<PDFPageView>()
     var document : PDFDocument
     
-    var currentPageIndex:Int = 0{
+    fileprivate let _currentPageIndex = CurrentValueSubject<Value,Never>( (newValue:0,oldValue:0) )
+
+    var currentPageIndex:Int = 0 {
         didSet {
-            if( oldValue == currentPageIndex ) {
-                return
-            }
-            if( oldValue > 0 ) {
-                let view = pages[oldValue - 1]
-                view.removeFromSuperview()
-
-                print( "remove view at index \(oldValue)" )
-            }
-            if( currentPageIndex > 0 ) {
-                
-                if( !pages.indices.contains(currentPageIndex-1) ) {
-                    
-                    print( "create view at index \(currentPageIndex)" )
-
-                    let view = PDFPageView( frame: self.view.frame,
-                                     document: document,
-                                     pageNumber: currentPageIndex-1,
-                                     backgroundImage: nil,
-                                     pageViewDelegate: nil)
-                    
-                    pages.append( view )
-                    self.view.addSubview(view)
-
-                }
-                else {
-                    print( "reuse view at index \(currentPageIndex)" )
-
-                    let view = pages[currentPageIndex - 1]
-                    self.view.addSubview(view)
-                }
-
-            }
+            guard currentPageIndex != oldValue else {return}
+            _currentPageIndex.send( (newValue:currentPageIndex, oldValue:oldValue) )
         }
     }
     
@@ -61,10 +36,58 @@ class PDFPageViewController : UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    fileprivate var cancellable:AnyCancellable?
+    
+    fileprivate func updateCurrentPage() {
+        
+        guard cancellable == nil else { return }
+        
+        cancellable = _currentPageIndex.sink {
+            print( "value changed \($0)")
+            
+            if( $0.oldValue > 0 ) {
+                let view = self.pages[$0.oldValue - 1]
+                view.removeFromSuperview()
+
+                print( "remove view at index \($0.oldValue)" )
+            }
+            if( $0.newValue > 0 ) {
+                let index = $0.newValue-1
+                if( !self.pages.indices.contains(index) ) {
+                    
+                    print( "create view at index \($0.newValue)" )
+
+                    let view = PDFPageView( frame: self.view.frame,
+                                            document: self.document,
+                                            pageNumber: index,
+                                            backgroundImage: nil,
+                                            pageViewDelegate: nil)
+                    
+                    self.pages.append( view )
+                    self.view.addSubview(view)
+
+                }
+                else {
+                    print( "reuse view at index \($0.newValue)" )
+
+                    let view = self.pages[index]
+                    self.view.addSubview(view)
+                }
+
+            }
+
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated:Bool) {
+        print( "viewWillAppear")
+        updateCurrentPage()
+        super.viewWillAppear(animated)
+    }
 }
 
 struct PDFDocumentView : UIViewControllerRepresentable {
@@ -74,7 +97,6 @@ struct PDFDocumentView : UIViewControllerRepresentable {
     func makeUIViewController(context: UIViewControllerRepresentableContext<PDFDocumentView>) -> UIViewControllerType {
         
         let controller = PDFPageViewController( document: document )
-        controller.currentPageIndex = pageSelected
         
         return controller
     }

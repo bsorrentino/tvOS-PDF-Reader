@@ -97,11 +97,9 @@
 				A000FB8824180E1C00D06E93 /* OHPDFImageView.swift */,
 				A000FB8A241815D500D06E93 /* ContentView.swift */,
 				5FCEB91B240C536300F9885A /* Assets.xcassets */,
-				5F28F562269CDEBA0084151B /* ExamplePDFs */,
 				5FCEB920240C536300F9885A /* LaunchScreen.storyboard */,
 				5FCEB923240C536300F9885A /* Info.plist */,
 				5FCEB91D240C536300F9885A /* Preview Content */,
-				5F28F59E269CEA730084151B /* PDFDocumentObject.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -417,7 +415,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.2;
+				TVOS_DEPLOYMENT_TARGET = 14.1;
 			};
 			name = Debug;
 		};
@@ -447,7 +445,7 @@
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.2;
+				TVOS_DEPLOYMENT_TARGET = 14.1;
 			};
 			name = Release;
 		};

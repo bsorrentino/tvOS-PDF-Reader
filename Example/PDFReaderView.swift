@@ -15,30 +15,40 @@ struct PDFThumbnailView : View {
     
     @Binding var pageSelected:Int
     
-    var size = CGSize(width: 200, height: 400)
+    var thumbnailSize:CGSize
+    
+    func thumbnailView( pageNumber:Int ) -> some View {
+        Button( action: {} ) {
+            
+            Image( uiImage: self.document.pdfPageImage(at: pageNumber)! )
+                    .resizable()
+                    .frame(width: self.thumbnailSize.width,
+                           height: self.thumbnailSize.height,
+                           alignment: .center)
+                .overlay(
+                    Text( "page \(pageNumber)" )
+                        .font(.footnote.italic().weight(.thin))
+                        .foregroundColor(.gray)
+                        .padding(),
+                    alignment: .bottomTrailing )
+            //.background(Color.white)
+            //.padding()
+        }
+        .focusable(true) { changed in
+            if( changed ) {
+                self.pageSelected = pageNumber
+            }
+        }
+        .buttonStyle(CardButtonStyle())
+
+    }
     
     var body: some View {
-        ScrollView {
+        ScrollView(showsIndicators: false ) {
             
-            VStack(alignment: .leading, spacing: 25 ) {
+            VStack(alignment: .leading) {
                     
-                ForEach( document.allPageNumbers, id: \.self ) { pageNumber in
-
-                    VStack {
-                        Image( uiImage: self.document.pdfPageImage(at: pageNumber)! )
-                            .resizable()
-                            .frame(width: self.size.width,
-                                   height: self.size.height,
-                                   alignment: .center)
-                        Text( "page \(pageNumber)" )
-                    }.background(Color.white)
-                    .focusable(true) { changed in
-                        if( changed ) {
-                            self.pageSelected = pageNumber
-                        }
-                    }
-                    
-                }
+                ForEach( document.allPageNumbers, id: \.self,  content:thumbnailView )
             }
         }
         
@@ -53,22 +63,34 @@ struct PDFReaderContentView: View {
     @State var pageSelected: Int = 1
     
     var body: some View {
-        
-        HStack {
-            
-            PDFThumbnailView( document:self.document, pageSelected:self.$pageSelected,
-                size:CGSize(width: 300, height: 400))
-            
-            if self.pageSelected > 0  {
-                Spacer()
+        GeometryReader { geom in
+            HStack {
                 
-                PDFDocumentView(
-                    document:self.document,
-                    pageSelected:self.$pageSelected )
-
-                Spacer()
-            }
-        }.background(Color.gray)
+                PDFThumbnailView( document:self.document,
+                                  pageSelected:self.$pageSelected,
+                                  thumbnailSize:CGSize(width: 300, height: geom.size.height/2))
+                    .frame( height: geom.size.height - 1)
+                
+                if self.pageSelected > 0  {
+                    Spacer()
+                    
+                    PDFDocumentView(
+                        document:self.document,
+                        pageSelected:self.$pageSelected )
+                        
+                    
+//                    Text( """
+//                            geom:
+//                                h:\(geom.size.height)
+//                                w:\(geom.size.width)
+//                          """)
+//                        .foregroundColor(.black)
+                    Spacer()
+                }
+                
+                
+            }.background(Color.gray)
+        }
     }
 }
 
