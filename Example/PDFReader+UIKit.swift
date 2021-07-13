@@ -15,8 +15,9 @@ class PDFPageViewController : UIViewController {
     
     typealias Value = (newValue:Int,oldValue:Int)
     
-    var pages = Array<PDFPageView>()
-    var document : PDFDocument
+    fileprivate var pages = Array<PDFPageView>()
+    
+    fileprivate var document : PDFDocument
     
     fileprivate let _currentPageIndex = CurrentValueSubject<Value,Never>( (newValue:0,oldValue:0) )
 
@@ -78,11 +79,7 @@ class PDFPageViewController : UIViewController {
 
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+        
     override func viewWillAppear(_ animated:Bool) {
         print( "viewWillAppear")
         updateCurrentPage()
@@ -91,6 +88,9 @@ class PDFPageViewController : UIViewController {
 }
 
 struct PDFDocumentView : UIViewControllerRepresentable {
+        
+    typealias UIViewControllerType = PDFPageViewController
+
     var document : PDFDocument
     @Binding var pageSelected:Int
     
@@ -105,11 +105,6 @@ struct PDFDocumentView : UIViewControllerRepresentable {
     
         uiViewController.currentPageIndex = pageSelected
     }
-    
-    
-    typealias UIViewControllerType = PDFPageViewController
-    
-
     
 }
 
