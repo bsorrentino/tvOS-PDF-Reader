@@ -34,12 +34,12 @@ struct PDFThumbnailView : View {
             //.background(Color.white)
             //.padding()
         }
+        .buttonStyle(CardButtonStyle())
         .focusable(true) { changed in
             if( changed ) {
                 self.pageSelected = pageNumber
             }
         }
-        .buttonStyle(CardButtonStyle())
 
     }
     
