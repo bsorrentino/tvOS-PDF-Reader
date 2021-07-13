@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FB7EA88269DDF8E00B849C0 /* PDFReader.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 5FB7EA86269DDF8E00B849C0 /* PDFReader.podspec */; };
+		5FB7EA89269DDF8E00B849C0 /* Sources in Resources */ = {isa = PBXBuildFile; fileRef = 5FB7EA87269DDF8E00B849C0 /* Sources */; };
 		A000FB7F2417C34B00D06E93 /* PDFReader+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E85B8824125AAD0024C66D /* PDFReader+UIKit.swift */; };
 		A000FB802417C34B00D06E93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEB917240C536200F9885A /* AppDelegate.swift */; };
 		A000FB812417C34B00D06E93 /* PDFReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEB919240C536200F9885A /* PDFReaderView.swift */; };
@@ -23,6 +25,8 @@
 		1471E208140806F068F5BB82 /* Pods-PDFReaderDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDFReaderDemo.release.xcconfig"; path = "Target Support Files/Pods-PDFReaderDemo/Pods-PDFReaderDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4101A69CC9798DC8EDFF24BB /* libPods-PDFReaderDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PDFReaderDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57559918DE6EA7125CD44D36 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		5FB7EA86269DDF8E00B849C0 /* PDFReader.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PDFReader.podspec; sourceTree = "<group>"; };
+		5FB7EA87269DDF8E00B849C0 /* Sources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sources; sourceTree = "<group>"; };
 		5FCEB917240C536200F9885A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FCEB919240C536200F9885A /* PDFReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFReaderView.swift; sourceTree = "<group>"; };
 		5FCEB91B240C536300F9885A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		14083FCF1D4A953900909913 = {
 			isa = PBXGroup;
 			children = (
+				5FB7EA86269DDF8E00B849C0 /* PDFReader.podspec */,
+				5FB7EA87269DDF8E00B849C0 /* Sources */,
 				5FCEB916240C536200F9885A /* Example */,
 				14083FDA1D4A953900909913 /* Products */,
 				A0E85B8A24125BAA0024C66D /* Frameworks */,
@@ -192,7 +198,9 @@
 			files = (
 				A000FB842417C41500D06E93 /* Assets.xcassets in Resources */,
 				A000FB852417C41500D06E93 /* Preview Assets.xcassets in Resources */,
+				5FB7EA88269DDF8E00B849C0 /* PDFReader.podspec in Resources */,
 				A000FB822417C35400D06E93 /* apple.pdf in Resources */,
+				5FB7EA89269DDF8E00B849C0 /* Sources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
