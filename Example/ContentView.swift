@@ -12,7 +12,7 @@ import PDFReader
 struct ContentView: View {
     enum Tab { case  PDFReader, OHPDFImage }
     
-    @State var selection : Tab = .OHPDFImage
+    @State var selection : Tab = .PDFReader
     
     let document1 = PDFDocument.createFormBundle(resource: "apple")
     let document2 = OHPDF.Document.createFormBundle(resource: "apple")
